@@ -95,7 +95,7 @@ a{
 }
 .nav-two_a--active{
     color: #000000;
-    border-bottom: 1px solid #EF2E4F;
+    border-bottom: 2px solid #EF2E4F;
     cursor:default;
 }
 .nav-two_a--button{
@@ -131,7 +131,7 @@ a{
     }
     .nav-two_a--move{
         color: #000000;
-        border-bottom: 1px solid #EF2E4F;
+        border-bottom: 2px solid #EF2E4F;
         cursor:default;
     }
     .nav-two_item--move{
