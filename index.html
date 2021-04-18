@@ -31,36 +31,36 @@
         </nav>
         <!--End navigation one-->
         <!--Start navigation two-->
-        <nav class="nav-opt">
+        <nav class="nav-two">
         
-            <div class="nav-opt_wrapper nav-opt_wrapper--first">
-                <div class="nav-opt_item">
+            <div class="nav-two_wrapper nav-two_wrapper--first">
+                <div class="nav-two_item">
                     <ul>
-                        <li ><a class="nav-opt_a nav-opt_a--active" href="#">OnePlus 8 </a></li>
-                        <li><a class="nav-opt_a nav-opt_a--right" href="#">OnePlus 8 Pro</a></li>                
+                        <li ><a class="nav-two_a nav-two_a--active" href="#">OnePlus 8 </a></li>
+                        <li><a class="nav-two_a nav-two_a--right" href="#">OnePlus 8 Pro</a></li>                
                     </ul>
                 </div>
-                <div class="nav-opt_item nav-opt_item--button">
+                <div class="nav-two_item nav-two_item--button">
                     <ul>
-                        <li><a class="nav-opt_a--button" href="#" >Buy now</a></li>                
+                        <li><a class="nav-two_a--button" href="#" >Buy now</a></li>                
                     </ul>
                 </div>
             </div>
-            <div class="nav-opt_wrapper nav-opt_wrapper--second">
-                <div class="nav-opt_item nav-opt_item--move">
+            <div class="nav-two_wrapper nav-two_wrapper--second">
+                <div class="nav-two_item nav-two_item--move">
                     <ul>
-                        <li><a class="nav-opt_a nav-opt_a--active" href="#">Overview </a></li>
-                        <li><a class="nav-opt_a nav-opt_a--responsive-no" href="#">Display</a></li>                
-                        <li><a class="nav-opt_a nav-opt_a--responsive-no" href="#">Performance</a></li>                
-                        <li><a class="nav-opt_a nav-opt_a--responsive-no" href="#">Design</a></li>                
-                        <li><a class="nav-opt_a nav-opt_a--responsive-no" href="#">Camera</a></li>                
+                        <li><a class="nav-two_a nav-two_a--active" href="#">Overview </a></li>
+                        <li><a class="nav-two_a nav-two_a--responsive-no" href="#">Display</a></li>                
+                        <li><a class="nav-two_a nav-two_a--responsive-no" href="#">Performance</a></li>                
+                        <li><a class="nav-two_a nav-two_a--responsive-no" href="#">Design</a></li>                
+                        <li><a class="nav-two_a nav-two_a--responsive-no" href="#">Camera</a></li>                
                     </ul>
                 </div>
-                <div class="nav-opt_item nav-opt_item--fix">
-                    <ul class="nav-opt_ul--fix">
-                        <li><a class="nav-opt_a" href="#">Specs</a></li>                
-                        <li><a class="nav-opt_a" href="#">Review</a></li>                
-                        <li><a class="nav-opt_a" href="#">OxygenOS</a></li>                
+                <div class="nav-two_item nav-two_item--fix">
+                    <ul class="nav-two_ul--fix">
+                        <li><a class="nav-two_a" href="#">Specs</a></li>                
+                        <li><a class="nav-two_a" href="#">Review</a></li>                
+                        <li><a class="nav-two_a" href="#">OxygenOS</a></li>                
                     </ul>
                 </div>
             </div>
@@ -102,33 +102,33 @@
 
     <script type="text/javascript">
     
-        window.onscroll = ()=> (screen.width<= 768)?stickyNavOptResponsive() :stickyNavOpt();
+        window.onscroll = ()=> (screen.width<= 768)?stickyNavTwoResponsive() :stickyNavTwo();
         //Sticky Navigation Optional
-        let navOpt = document.querySelector(".nav-opt");
+        let navTwo = document.querySelector(".nav-two");
         //Sticky Navigation Optional Inner
-        let navOptWrapperSecond = document.querySelector(".nav-opt_wrapper--second");
-        let sticky = navOpt.offsetTop;
+        let navTwoWrapperSecond = document.querySelector(".nav-two_wrapper--second");
+        let sticky = navTwo.offsetTop;
         //Navigation Element to move left
-        let navOptItemMove = document.querySelector(".nav-opt_item--move");
-        function stickyNavOpt() {
+        let navTwoItemMove = document.querySelector(".nav-two_item--move");
+        function stickyNavTwo() {
             if(window.pageYOffset >= sticky){
-                navOpt.classList.add("nav-opt--sticky")
-                navOptWrapperSecond.classList.add("nav-opt_wrapper--sticky")
+                navTwo.classList.add("nav-two--sticky")
+                navTwoWrapperSecond.classList.add("nav-two_wrapper--sticky")
             }else{
-                navOpt.classList.remove("nav-opt--sticky")
-                navOptWrapperSecond.classList.remove("nav-opt_wrapper--sticky")
+                navTwo.classList.remove("nav-two--sticky")
+                navTwoWrapperSecond.classList.remove("nav-two_wrapper--sticky")
             };
-            navOptItemMove.style.right = (pageYOffset-335 >= 0)?"0px": pageYOffset-335 + "px";
+            navTwoItemMove.style.right = (pageYOffset-335 >= 0)?"0px": pageYOffset-335 + "px";
         }
-        function stickyNavOptResponsive() {
+        function stickyNavTwoResponsive() {
             if(window.pageYOffset >= sticky){
-                navOpt.classList.add("nav-opt--sticky")
+                navTwo.classList.add("nav-two--sticky")
             }else{
-                navOpt.classList.remove("nav-opt--sticky")
+                navTwo.classList.remove("nav-two--sticky")
             };            
         }
         /* HTML collection
-        const navLinks = document.getElementsByClassName("nav-opt_a");
+        const navLinks = document.getElementsByClassName("nav-two_a");
         function sentToPage() {
             console.log("sentToPage")
         }

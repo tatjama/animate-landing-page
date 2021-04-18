@@ -35,17 +35,17 @@ a{
 }
 /*End Navigation One*/
 /*Start Navigation optional*/
-.nav-opt{
+.nav-two{
     background-color: #fff;
     width: 100%;
 }
     /*Sticky Navigation optional on scroll*/
-.nav-opt--sticky{
+.nav-two--sticky{
     position: fixed;
     top: 0px;
     width: 100%;
 }
-.nav-opt_wrapper{
+.nav-two_wrapper{
     display:flex;
     flex-direction: row;
     justify-content:space-between;
@@ -55,42 +55,42 @@ a{
     position: relative;
     border-bottom: 1px solid #ccc;
 }
-.nav-opt_wrapper--second{
+.nav-two_wrapper--second{
     justify-content:center;
     position: absolute;
     top: 70px;
     right: 100px;
 }
     /*Sticky Navigation inner on scroll*/
-.nav-opt_wrapper--sticky{
+.nav-two_wrapper--sticky{
     position: fixed;
     top:0px;
     width: 100%;
     right: -240px;
 }
-.nav-opt_item--move{
+.nav-two_item--move{
     position: relative;
     right: -335px;/*right -335px to 0px */
 }
-.nav-opt_item--fix{
+.nav-two_item--fix{
     background-color: #fff;
     padding-right: 20px;
     z-index: 5;
 }
-.nav-opt_a{
+.nav-two_a{
     color: #b3b3b3;
     margin-left: 10px;
     padding-left: 10px;
     font-size: 14px;
     line-height: 2;
 }
-.nav-opt_a--right{
+.nav-two_a--right{
     border-left: 1px solid #ccc;
 }
-.nav-opt_a:hover{
+.nav-two_a:hover{
     color: #000000;
 }
-.nav-opt_a--active{
+.nav-two_a--active{
     color: #000000;
     font-weight:400;
     font-size: 0.9em;
@@ -98,7 +98,7 @@ a{
     border-bottom: 1px solid #EF2E4F;
     cursor:default;
 }
-.nav-opt_a--button{
+.nav-two_a--button{
     color:#fff;
     background-color:#EB0028;
     font-size: 14px;
@@ -108,42 +108,42 @@ a{
     z-index: 5;
     transition-duration: 0.5s;
 }
-.nav-opt_a--button:hover{
+.nav-two_a--button:hover{
     background-color: #B8001F;
 }
 @media screen and (max-width:768px){
     .nav-main{
         height: 50px;
     }    
-    .nav-opt_wrapper--first{
+    .nav-two_wrapper--first{
         z-index:10 ;
         background-color: #fff;
     }
-    .nav-opt_wrapper--second{
+    .nav-two_wrapper--second{
         background-color: #fff;
         right: 0;
         top: 50px;
         width: 100%;
         justify-content:space-between;
     }    
-    .nav-opt_a--responsive-no{
+    .nav-two_a--responsive-no{
         display: none;
     }
-    .nav-opt_item--move{
+    .nav-two_item--move{
         right: 0;
         width: 35%;
     }
     
-    .nav-opt_item--fix{
+    .nav-two_item--fix{
         width: 65%;
     }
-    .nav-opt_ul--fix{
+    .nav-two_ul--fix{
         width: 100%;
         display: flex;
         justify-content:space-between;
     }
     /*Sticky Navigation optional on scroll*/
-.nav-opt--sticky{
+.nav-two--sticky{
     position: fixed;
     top: 0px;
     width: 100%;
