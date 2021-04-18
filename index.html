@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css"/>
+    <title>Animate Landing Page</title>
+</head>
+<body>
+    <div class="wrapper">
+        <!--Start navigation one-->
+        <nav class="nav-main flex-three">
+            <div class="flex-three_item logo">
+
+            </div>
+            <div class="flex-three_item">
+                <ul>
+                    <li><a class="" href="#">Nav 1</a></li>
+                    <li><a href="#">Nav 2</a></li>
+                    <li><a href="#">Nav 3</a></li>                
+                </ul>
+            </div>
+            <div class="flex-three_item">
+                <div class="flex-two">
+                    <div class="flex-two_item"></div>
+                    <div class="flex-two_item"></div>
+                </div>
+            </div>
+            
+        </nav>
+        <!--End navigation one-->
+        <!--Start navigation two-->
+        <nav class="nav-opt">
+        
+            <div class="nav-opt_wrapper nav-opt_wrapper--first">
+                <div class="nav-opt_item">
+                    <ul>
+                        <li ><a class="nav-opt_a nav-opt_a--active" href="#">OnePlus 8 </a></li>
+                        <li><a class="nav-opt_a nav-opt_a--right" href="#">OnePlus 8 Pro</a></li>                
+                    </ul>
+                </div>
+                <div class="nav-opt_item nav-opt_item--button">
+                    <ul>
+                        <li><a class="nav-opt_a--button" href="#" >Buy now</a></li>                
+                    </ul>
+                </div>
+            </div>
+            <div class="nav-opt_wrapper nav-opt_wrapper--second">
+                <div class="nav-opt_item nav-opt_item--move">
+                    <ul>
+                        <li><a class="nav-opt_a nav-opt_a--active" href="#">Overview </a></li>
+                        <li><a class="nav-opt_a nav-opt_a--responsive-no" href="#">Display</a></li>                
+                        <li><a class="nav-opt_a nav-opt_a--responsive-no" href="#">Performance</a></li>                
+                        <li><a class="nav-opt_a nav-opt_a--responsive-no" href="#">Design</a></li>                
+                        <li><a class="nav-opt_a nav-opt_a--responsive-no" href="#">Camera</a></li>                
+                    </ul>
+                </div>
+                <div class="nav-opt_item nav-opt_item--fix">
+                    <ul class="nav-opt_ul--fix">
+                        <li><a class="nav-opt_a" href="#">Specs</a></li>                
+                        <li><a class="nav-opt_a" href="#">Review</a></li>                
+                        <li><a class="nav-opt_a" href="#">OxygenOS</a></li>                
+                    </ul>
+                </div>
+            </div>
+        
+        </nav>
+        <!--End navigation two-->
+        <!--start section one-->
+        <div class="section-one flex-two">
+            <div class="flex-two_item"></div>
+            <div class="flex-two_item"></div>
+        </div>
+        <!--End section one-->
+        <!--start section two-->
+        <div class="section-two fixed"></div>
+        <!--End section two-->            
+        <!--Start section three-->
+        <div class="section-three parallax"></div>
+        <!--End section three-->
+        <!--Start section four-->
+        <div class="section-four flex-three">
+            <div class="flex-three_item"></div>
+            <div class="flex-three_item">
+                <div class="flex-two">
+                    <div class="flex-two_item"></div>
+                    <div class="flex-two_item"></div>
+                </div>
+            </div>
+            <div class="flex-three_item"></div>
+        </div>
+        <!--End section four-->
+        <!--Start section five-->
+        <div class="section-five zoom"></div>
+        <!--End section five-->
+        <!--Start section six-->
+        <div class="section-six transparent"></div>
+        <!--End section six-->
+
+    </div>
+
+    <script type="text/javascript">
+    
+        window.onscroll = ()=> (screen.width<= 768)?stickyNavOptResponsive() :stickyNavOpt();
+        //Sticky Navigation Optional
+        let navOpt = document.querySelector(".nav-opt");
+        //Sticky Navigation Optional Inner
+        let navOptWrapperSecond = document.querySelector(".nav-opt_wrapper--second");
+        let sticky = navOpt.offsetTop;
+        //Navigation Element to move left
+        let navOptItemMove = document.querySelector(".nav-opt_item--move");
+        function stickyNavOpt() {
+            if(window.pageYOffset >= sticky){
+                navOpt.classList.add("nav-opt--sticky")
+                navOptWrapperSecond.classList.add("nav-opt_wrapper--sticky")
+            }else{
+                navOpt.classList.remove("nav-opt--sticky")
+                navOptWrapperSecond.classList.remove("nav-opt_wrapper--sticky")
+            };
+            navOptItemMove.style.right = (pageYOffset-335 >= 0)?"0px": pageYOffset-335 + "px";
+        }
+        function stickyNavOptResponsive() {
+            if(window.pageYOffset >= sticky){
+                navOpt.classList.add("nav-opt--sticky")
+            }else{
+                navOpt.classList.remove("nav-opt--sticky")
+            };            
+        }
+        /* HTML collection
+        const navLinks = document.getElementsByClassName("nav-opt_a");
+        function sentToPage() {
+            console.log("sentToPage")
+        }
+        Array.from(navLinks).forEach((element) =>{
+            element.addEventListener("click",sentToPage)
+        })*/
+        /*for(let i=0; i< navLinks.length; i++){
+            navLinks[i].addEventListener("click", sentToPage)
+        }*/
+        /*for(navLink of navLinks){
+            navLink.addEventListener("click", sentToPage)
+        }*/
+        
+        
+        
+
+    </script>
+</body>
+</html>
