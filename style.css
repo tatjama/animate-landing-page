@@ -9,7 +9,7 @@ html{
 }
 body{
     font-family:"Roman-55","Helvetica Neue","Helvetica","Arial",sans-serif;
-    font-display: swap; /*FOIT-flashofinvisibletext*/
+    font-display: swap; /*FOIT-flash of invisible text*/
     color: #323232;
     font-size: 1em;
     line-height: 1.2;
