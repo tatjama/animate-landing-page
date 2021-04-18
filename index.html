@@ -49,11 +49,11 @@
             <div class="nav-two_wrapper nav-two_wrapper--second">
                 <div class="nav-two_item nav-two_item--move">
                     <ul>
-                        <li><a class="nav-two_a nav-two_a--active" href="#">Overview </a></li>
-                        <li><a class="nav-two_a nav-two_a--responsive-no" href="#">Display</a></li>                
-                        <li><a class="nav-two_a nav-two_a--responsive-no" href="#">Performance</a></li>                
-                        <li><a class="nav-two_a nav-two_a--responsive-no" href="#">Design</a></li>                
-                        <li><a class="nav-two_a nav-two_a--responsive-no" href="#">Camera</a></li>                
+                        <li><a class="nav-two_a nav-two_a--move" href="#">Overview </a></li>
+                        <li><a class="nav-two_a nav-two_a--move nav-two_a--responsive-no" href="#">Display</a></li>                
+                        <li><a class="nav-two_a nav-two_a--move nav-two_a--responsive-no" href="#">Performance</a></li>                
+                        <li><a class="nav-two_a nav-two_a--move nav-two_a--responsive-no" href="#">Design</a></li>                
+                        <li><a class="nav-two_a nav-two_a--move nav-two_a--responsive-no" href="#">Camera</a></li>                
                     </ul>
                 </div>
                 <div class="nav-two_item nav-two_item--fix">
@@ -102,31 +102,51 @@
 
     <script type="text/javascript">
     
-        window.onscroll = ()=> (screen.width<= 768)?stickyNavTwoResponsive() :stickyNavTwo();
-        //Sticky Navigation Optional
-        let navTwo = document.querySelector(".nav-two");
-        //Sticky Navigation Optional Inner
-        let navTwoWrapperSecond = document.querySelector(".nav-two_wrapper--second");
-        let sticky = navTwo.offsetTop;
+        window.onscroll = () => scrollApp();
+        //Sticky Navigation Two
+        const navTwo = document.querySelector(".nav-two");
+        //Sticky Navigation Two Inner
+        const navTwoWrapperSecond = document.querySelector(".nav-two_wrapper--second");
+        const sticky = navTwo.offsetTop;
         //Navigation Element to move left
-        let navTwoItemMove = document.querySelector(".nav-two_item--move");
-        function stickyNavTwo() {
+        const navTwoItemMove = document.querySelector(".nav-two_item--move");
+        //Navigation Links from Move Element to be Active
+        const linksMove = document.getElementsByClassName("nav-two_a--move");
+
+        const scrollApp = () => {
+            navScroll();
+            linkMoveToActive();
+        }
+
+        const navScroll = () => {(screen.width<= 768)?stickyNavTwoResponsive() :stickyNavTwo();}
+
+        const stickyNavTwo = () => {
             if(window.pageYOffset >= sticky){
-                navTwo.classList.add("nav-two--sticky")
-                navTwoWrapperSecond.classList.add("nav-two_wrapper--sticky")
+                navTwo.classList.add("nav-two--sticky");
+                navTwoWrapperSecond.classList.add("nav-two_wrapper--sticky");                
             }else{
                 navTwo.classList.remove("nav-two--sticky")
                 navTwoWrapperSecond.classList.remove("nav-two_wrapper--sticky")
             };
             navTwoItemMove.style.right = (pageYOffset-335 >= 0)?"0px": pageYOffset-335 + "px";
         }
-        function stickyNavTwoResponsive() {
-            if(window.pageYOffset >= sticky){
-                navTwo.classList.add("nav-two--sticky")
-            }else{
-                navTwo.classList.remove("nav-two--sticky")
-            };            
+
+        const stickyNavTwoResponsive = () => {
+            (window.pageYOffset >= sticky)? navTwo.classList.add("nav-two--sticky"): navTwo.classList.remove("nav-two--sticky")                       
         }
+        
+        //Links from Navigation Two in Move change to Active
+        const linkMoveToActive = () => {                       
+            for(let i = 0; i < linksMove.length; i++){                               
+             if( window.pageYOffset < 200 * i ){
+                  linksMove[i].classList.remove("nav-two_a--active");
+            }else{ 
+                 linksMove[i].classList.add("nav-two_a--active");
+                 if( window.pageYOffset >= 200 * (i + 1)){ linksMove[i].classList.remove("nav-two_a--active")}
+            }             
+            }
+        }
+
         /* HTML collection
         const navLinks = document.getElementsByClassName("nav-two_a");
         function sentToPage() {
