@@ -5,6 +5,7 @@
     box-sizing: border-box;
 }
 html{
+    overflow-x: hidden;
     scroll-behavior: smooth;
 }
 body{
@@ -13,6 +14,7 @@ body{
     font-size: 1em;
     line-height: 1.2;
     overflow-x: hidden;
+    position: relative;
     font-feature-settings: "salt";
     -webkit-font-feature-settings: "salt";
     -moz-font-feature-settings: "salt";
@@ -39,12 +41,19 @@ a{
     align-items: center;
     flex-wrap: wrap;
     padding: 20px;
+    width: 100%;
+}
+.nav-one_link:hover{
+    border-bottom: 2px solid #EF2E4F;
 }
 .nav-one_hamburger{
     display:none;
 }
 .nav-one_img--hamburger{
     width: 30px;
+}
+.nav-one_logo{
+    cursor: pointer;
 }
 .nav-one_img--logo{
     width: 130px;
@@ -74,15 +83,38 @@ a{
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content:space-between;
+    position: relative;
+}
+.nav-one_img{
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    padding-bottom: 5px;
+    margin-bottom: -12px;
 }
 .nav-one_img--avatar{
-    width: 25px;
-    margin: 0px 10px;
+    width: 30px;
+    margin-right: 10px;
+}
+.nav-one_img:hover{
+    border-bottom:2px solid #EF2E4F;
+}
+.nav-one_bag--mo{
+    display: none;
 }
 .nav-one_img--bag{
     width:30px;
     margin-left: 20px;
 }
+.nav-one_menu--bag{
+    width: 500px;
+    height: 50vh;
+    position: absolute;
+    top: 70px;
+    right: -500px;
+    background-color: yellow;
+}
+
 /*End Navigation One*/
 /*Start Navigation Two*/
 .nav-two{
@@ -116,7 +148,7 @@ a{
     position: fixed;
     top:0px;
     width: 100%;
-    right: -240px;
+    justify-content: flex-end;
 }
 .nav-two_item--move{
     position: relative;
@@ -186,6 +218,15 @@ a{
     /*Start Navigation One*/
     .nav-one{
         height: 50px;
+    }
+    .nav-one_bag--mo{
+        display: block;
+    }
+    .nav-one_bag--pc{
+        display: none;
+    }    
+   .nav-one_menu--bag{
+        width: 100%;
     }    
     /*End Navigation one*/
     /*Start Navigation Two*/

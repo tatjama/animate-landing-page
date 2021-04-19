@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./style.css"/>
     <title>Animate Landing Page</title>
 </head>
-<body>
+<body onload="handleOnLoad()">
     <div class="wrapper">
         <!--Start navigation one-->
         <nav class="nav-one">
@@ -15,9 +15,9 @@
                 <div class = "nav-one_hamburger"> 
                     <img class = "nav-one_img--hamburger" src="./images/hamburger.png"/>
                 </div>
-                <div class="nav-one_logo">
+                <a class="nav-one_logo">
                     <img class="nav-one_img--logo" src="./images/logo.png"/>
-                </div>
+                </a>
                 <div class="nav-one_menu">
                     <ul>
                         <li><a class="nav-one_a" href="#">OnePlus Series <span class="nav-one_span"> New </span></a></li>
@@ -31,15 +31,35 @@
                     </ul>
                 </div>
                     <div class="nav-one_images">
-                        <div >
+                        <a href="#" class= "nav-one_img">
                             <img class="nav-one_img--avatar" src="images/avatar.jpg"/>
-                        </div>
-                        <div class="flex-two_item">
+                        </a>
+                        <a href="#" class= "nav-one_img nav-one_bag--pc" onmouseover="showShoppingCart()" onmouseout="hideShoppingCart()">
+                            <img class="nav-one_img--bag" src="images/bag.png"/>
+                        </a>
+                        <div class="nav-one_img nav-one_bag--mo" onclick="openShoppingCart()">
                             <img class="nav-one_img--bag" src="images/bag.png"/>
                         </div>
                     </div>
             </div>
+            <div class="nav-one_menu--bag">
+
+            </div> 
         </nav>
+        
+        <script type="text/javascript">
+        const navOneMenuBag = document.querySelector('.nav-one_menu--bag');
+        function showShoppingCart(){
+            navOneMenuBag.style.right = "0px";
+        }
+        function hideShoppingCart(){
+            navOneMenuBag.style.right = "-500px";
+        }
+        function openShoppingCart(){
+            navOneMenuBag.style.right = "0px";
+            navOneMenuBag.style.top = "0px";
+        }
+        </script>
         <!--End navigation one-->
         <!--Start navigation two-->
         <nav class="nav-two">
@@ -139,8 +159,10 @@
     </div>
 
     <script type="text/javascript">
-    
-        window.onscroll = () => scrollApp();
+        function handleOnLoad(){
+            window.onscroll = () => scrollApp();
+        }
+        
         //Sticky Navigation Two
         const navTwo = document.querySelector(".nav-two");
         //Sticky Navigation Two Inner
