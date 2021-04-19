@@ -106,16 +106,158 @@ a{
     width:30px;
     margin-left: 20px;
 }
-.nav-one_menu--bag{
-    width: 500px;
+.nav-one_menu--one-series{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 70px;
+    right: -100%;
+    background-color:rgb(255, 94, 0);
+    z-index: 20;
+}
+.nav-one_menu--nord-series{
+    width: 100%;
     height: 50vh;
     position: absolute;
     top: 70px;
-    right: -500px;
-    background-color: yellow;
+    right: -100%;
+    background-color:pink;
+    z-index: 20;
+}
+.nav-one_menu--shop{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 70px;
+    right: -100%;
+    background-color:blue;
+    z-index: 20;
+}
+.nav-one_menu--avatar{
+    width: 300px;
+    height: 50vh;
+    position: absolute;
+    top: 70px;
+    right: -300px;
+    background-color:green;
+    z-index: 20;
 }
 
+.nav-one_menu--bag{
+    width: 450px;
+    height: 50vh;
+    position: absolute;
+    top: 70px;
+    right: -450px;
+    background-color: #fff;
+    z-index: 20;
+    padding: 10px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+.nav-one_menu-title--bag{
+    display: none;
+}
+.nav-one_menu-subtitle--bag{
+    padding: 20px;
+}
+.nav-one_menu-cart--bag{
+    height: 55%;
+    border-top: 4px solid rgba(204, 204, 204, 0.5);
+    background-image: url(./images/bag.png);
+    background-size: 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.nav-one_menu-filter--bag{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+}
+.nav-one_menu-message--bag{
+    margin:  auto;
+    text-align: center;
+    padding: 20px;
+}
+.nav-one_menu-buttons--bag{
+    display: none;
+}
+.nav-one_menu-button--bag{
+    width: 100%;
+    padding: 10px;
+    margin: 10px auto;
+    background-color: #fff;
+    border-color: #ccc;
+}
+.nav-one_menu-button--shop{
+    padding: 30px 20px;
+    border-top: 1px solid #ccc;
+}
+
+
 /*End Navigation One*/
+@media screen and (max-width:1050px){
+    /*Start Navigation One*/
+    .nav-one_wrapper{
+        padding: 10px;
+    }
+    .nav-one_hamburger{
+        display:block;
+    }
+    .nav-one_img--logo{
+        width: 110px;
+    }    
+    .nav-one_menu{
+        display:none;
+    }
+    .nav-one_img--avatar{
+        display:none;
+    }
+    /*End Navigation One*/
+}
+@media screen and (max-width:768px){
+    /*Start Navigation One*/
+    .nav-one{
+        height: 50px;
+    }
+    .nav-one_bag--mo{
+        display: block;
+    }
+    .nav-one_bag--pc{
+        display: none;
+    }    
+   .nav-one_menu--bag{
+        width: 100%;
+        height: 100vh;
+        top: 0px;
+    }   
+    .nav-one_menu-title--bag{
+        display: flex;
+        flex-direction: row;
+        justify-content:space-between;
+        align-items: center;
+        padding: 10px;
+    }
+    .nav-one_menu-close--bag{
+        color: #b3b3b3;
+    } 
+    .nav-one_menu-buttons--bag{
+        height: 35%;
+        border-top: 1px solid #ccc;
+        padding: 10px;
+        display: block;
+    }
+    .nav-one_menu-button--shop{
+        display: none;
+    }
+   .nav-one_menu--avatar{
+       display: none;
+    }    
+    /*End Navigation one*/
+}
+
+/*END RESPONSIVE*/
+
 /*Start Navigation Two*/
 .nav-two{
     background-color: #fff;
@@ -195,25 +337,7 @@ a{
     background-color: #B8001F;
 }
 /*End Navigation Two*/
-@media screen and (max-width:1050px){
-    /*Start Navigation One*/
-    .nav-one_wrapper{
-        padding: 10px;
-    }
-    .nav-one_hamburger{
-        display:block;
-    }
-    .nav-one_img--logo{
-        width: 110px;
-    }
-    .nav-one_img--avatar{
-        display:none;
-    }
-    .nav-one_menu{
-        display:none;
-    }
-    /*End Navigation One*/
-}
+
 @media screen and (max-width:768px){
     /*Start Navigation One*/
     .nav-one{
@@ -227,6 +351,10 @@ a{
     }    
    .nav-one_menu--bag{
         width: 100%;
+        height: 100vh;
+    }    
+   .nav-one_menu--avatar{
+       display: none;
     }    
     /*End Navigation one*/
     /*Start Navigation Two*/

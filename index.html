@@ -20,9 +20,27 @@
                 </a>
                 <div class="nav-one_menu">
                     <ul>
-                        <li><a class="nav-one_a" href="#">OnePlus Series <span class="nav-one_span"> New </span></a></li>
-                        <li><a class="nav-one_a" href="#">Nord Series <span class="nav-one_span">New</span></a></li>
-                        <li><a class="nav-one_a" href="#">Shop <span class="nav-one_span"> New</span></a></li>                
+                        <li>
+                            <a class="nav-one_a" href="#" 
+                            onmouseover="showMenu(navOneMenuOneSeries, '0px')" 
+                            onmouseout="hideMenu(navOneMenuOneSeries, '-100%')">
+                                OnePlus Series <span class="nav-one_span"> New </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-one_a" href="#" 
+                            onmouseover="showMenu(navOneMenuNordSeries, '0px')" 
+                            onmouseout="hideMenu(navOneMenuNordSeries, '-100%')">
+                                Nord Series <span class="nav-one_span">New</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-one_a" href="#" 
+                            onmouseover="showMenu(navOneMenuShop, '0px')" 
+                            onmouseout="hideMenu(navOneMenuShop, '-100%')">
+                                Shop <span class="nav-one_span"> New</span>
+                            </a>
+                        </li>                
                         <li><a class="nav-one_a" href="#">About</a></li>
                         <li><a class="nav-one_a" href="#">Support</a></li>
                         <li><a class="nav-one_a" href="#">Community</a></li>                
@@ -31,34 +49,59 @@
                     </ul>
                 </div>
                     <div class="nav-one_images">
-                        <a href="#" class= "nav-one_img">
+                        <a href="#" class= "nav-one_img" 
+                        onmouseover="showMenu(navOneMenuAvatar, '0px')" 
+                        onmouseout="hideMenu(navOneMenuAvatar, '-300px')">
                             <img class="nav-one_img--avatar" src="images/avatar.jpg"/>
                         </a>
-                        <a href="#" class= "nav-one_img nav-one_bag--pc" onmouseover="showShoppingCart()" onmouseout="hideShoppingCart()">
+                        <a href="#" class= "nav-one_img nav-one_bag--pc" 
+                        onmouseover="showMenu(navOneMenuBag, '0px')" 
+                        onmouseout="hideMenu(navOneMenuBag, '-450px')">
                             <img class="nav-one_img--bag" src="images/bag.png"/>
                         </a>
-                        <div class="nav-one_img nav-one_bag--mo" onclick="openShoppingCart()">
+                        <div class="nav-one_img nav-one_bag--mo" onclick="showMenu(navOneMenuBag, '0px')">
                             <img class="nav-one_img--bag" src="images/bag.png"/>
                         </div>
                     </div>
             </div>
+            <div class="nav-one_menu--one-series"></div>
+            <div class="nav-one_menu--nord-series"></div>
+            <div class="nav-one_menu--shop"></div>
+            <div class="nav-one_menu--avatar"></div> 
             <div class="nav-one_menu--bag">
-
-            </div> 
+                <div class="nav-one_menu-header--bag">
+                    <div class="nav-one_menu-title--bag">
+                        <h3>Your Cart</h3>
+                        <h1 class="nav-one_menu-close--bag" onclick="hideMenu(navOneMenuBag, '-450px')">x</h1>
+                    </div>
+                    <p class="nav-one_menu-subtitle--bag">You are 100$ away from free shipping. </p>
+                </div>
+                <div class="nav-one_menu-cart--bag">
+                    <div class="nav-one_menu-filter--bag">
+                        <p class="nav-one_menu-message--bag">Your shopping cart is empty now, bat it doesn't have to be.</p>
+                    </div>
+                </div>
+                <div class="nav-one_menu-buttons--bag">
+                    <button class="nav-one_menu-button--bag">OnePlus Series</button> 
+                    <button class="nav-one_menu-button--bag"> Nord Series</button>
+                    <button class="nav-one_menu-button--bag">Shop</button>
+                </div>
+                <div class="nav-one_menu-button--shop">
+                    <button class="nav-one_menu-button--bag ">Go shopping</button>
+                </div>
+            </div>
         </nav>
         
         <script type="text/javascript">
+        const navOneMenuOneSeries = document.querySelector('.nav-one_menu--one-series');
+        const navOneMenuNordSeries = document.querySelector('.nav-one_menu--nord-series');
+        const navOneMenuShop = document.querySelector('.nav-one_menu--shop');
+        const navOneMenuAvatar = document.querySelector('.nav-one_menu--avatar');
         const navOneMenuBag = document.querySelector('.nav-one_menu--bag');
-        function showShoppingCart(){
-            navOneMenuBag.style.right = "0px";
-        }
-        function hideShoppingCart(){
-            navOneMenuBag.style.right = "-500px";
-        }
-        function openShoppingCart(){
-            navOneMenuBag.style.right = "0px";
-            navOneMenuBag.style.top = "0px";
-        }
+        
+        const showMenu = (element, value) =>  element.style.right = value;
+        const hideMenu = (element, value) => element.style.right = value;        
+               
         </script>
         <!--End navigation one-->
         <!--Start navigation two-->
