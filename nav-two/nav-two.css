@@ -67,7 +67,7 @@ a{
     position: fixed;
     top:0px;
     width: 100%;
-    right: -240px;
+    justify-content: flex-end;
 }
 .nav-two_item--move{
     position: relative;
