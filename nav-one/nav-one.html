@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./nav-one.css"/>
+    <title>Animate Landing Page</title>
+</head>
+<!--<body onload="handleOnLoad()">-->
+<body>    
+    <div class="wrapper">
+        <!--Start navigation one-->
+        <nav class="nav-one">
+            <div class="nav-one_wrapper">
+                <div class = "nav-one_hamburger" onclick="openResponsiveMenu()"> 
+                    <img class = "nav-one_img--hamburger" src="./images/hamburger.png"/>
+                </div>
+                <a class="nav-one_logo">
+                    <img class="nav-one_img--logo" src="./images/logo.png"/>
+                </a>
+                <div class="nav-one_menu">
+                    <p class="nav-one_close--responsive" onclick="closeResponsiveMenu()">X</p>
+                    <ul>                        
+                        <li>
+                            <a class="nav-one_a" href="#" 
+                            onmouseover="showMenu(navOneMenuOneSeries, '0px')" 
+                            onmouseout="hideMenu(navOneMenuOneSeries, '-100%')">
+                                OnePlus Series <span class="nav-one_span"> New </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-one_a" href="#" 
+                            onmouseover="showMenu(navOneMenuNordSeries, '0px')" 
+                            onmouseout="hideMenu(navOneMenuNordSeries, '-100%')">
+                                Nord Series <span class="nav-one_span">New</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-one_a" href="#" 
+                            onmouseover="showMenu(navOneMenuShop, '0px')" 
+                            onmouseout="hideMenu(navOneMenuShop, '-100%')">
+                                Shop <span class="nav-one_span"> New</span>
+                            </a>
+                        </li>                
+                        <li><a class="nav-one_a" href="#">About</a></li>
+                        <li><a class="nav-one_a" href="#">Support</a></li>
+                        <li><a class="nav-one_a" href="#">Community</a></li>                
+                        <li><a class="nav-one_a" href="#">Find a store</a></li>
+                        <li><a class="nav-one_a" href="#">App <span class="nav-one_span"> New</span></a></li>                
+                    </ul>
+                    <div class="nav-one_avatar--responsive">
+                        <img src="./images/avatar.jpg" alt="" class="nav-one_img--avatar-responsive">
+                        <div class="">
+                            <a class="nav-one_a nav-one_a--avatar-sign">SignIn</a>
+                            <a class="nav-one_a nav-one_a--avatar-sign nav-one_a--avatar-sign-right">SignUp</a>
+                        </div>
+                    </div>
+                </div>
+                    <div class="nav-one_images">
+                        <a href="#" class= "nav-one_img" 
+                        onmouseover="showMenu(navOneMenuAvatar, '0px')" 
+                        onmouseout="hideMenu(navOneMenuAvatar, '-350px')"
+                        >
+                            <img class="nav-one_img--avatar" src="images/avatar.jpg"/>
+                        </a>
+                        <a href="#" class= "nav-one_img nav-one_bag--pc" 
+                        onmouseover="showMenu(navOneMenuBag, '0px')" 
+                        onmouseout="hideMenu(navOneMenuBag, '-450px')">
+                            <img class="nav-one_img--bag" src="images/bag.png"/>
+                        </a>
+                        <div class="nav-one_img nav-one_bag--mo" onclick="showMenu(navOneMenuBag, '0px')">
+                            <img class="nav-one_img--bag" src="images/bag.png"/>
+                        </div>
+                    </div>
+            </div>
+                <!--Start OnePlusSeries Menu-->
+            <div class="nav-one_menu--layer nav-one_menu--one-series "
+            onmouseover="showMenu(navOneMenuOneSeries, '0px')" 
+            onmouseout="hideMenu(navOneMenuOneSeries, '-100%')"
+            >
+                <div class="nav-one_close--menu"><h1>__</h1></div>
+                <div class="nav-one_menu--flex ">                    
+                    <div class="nav-one_item--menu">
+                        <img src="./images/shop/green.jpg" alt="" class="nav-one_img--menu"/>
+                        <p>OnePlus 9 Pro</p>
+                    </div>
+                    <div class="nav-one_item--menu">
+                        <img src="./images/shop/light-blue1.jpg" alt="" class="nav-one_img--menu"/>
+                        <p>OnePlus 9</p>
+                    </div>
+                    <div class="nav-one_item--menu">
+                        <img src="./images/shop/orange.jpg" alt="" class="nav-one_img--menu"/>
+                        <p>OnePlus 8T</p>
+                    </div>
+                    <div class="nav-one_item--menu">
+                        <img src="./images/shop/green.jpg" alt="" class="nav-one_img--menu"/>
+                        <p>OnePlus 8 Pro</p>
+                    </div>
+                    <div class="nav-one_item--menu">
+                        <img src="./images/shop/light-blue1.jpg" alt="" class="nav-one_img--menu"/>
+                        <p>OnePlus 8</p>
+                    </div>
+                    <div class="nav-one_item--menu">
+                        <img src="./images/shop/orange.jpg" alt="" class="nav-one_img--menu"/>
+                        <p>OnePlus 7T</p>
+                    </div>
+                </div>                                  
+            </div>
+                <!--End OnePlusSeries Menu-->
+                <!--Start NordSeries Menu-->
+            <div class="nav-one_menu--layer nav-one_menu--nord-series"
+            onmouseover="showMenu(navOneMenuNordSeries, '0px')" 
+            onmouseout="hideMenu(navOneMenuNordSeries, '-100%')"
+            >
+                <div class="nav-one_menu--flex nav-one_menu--flex-center">
+                    <div class="nav-one_item--menu">
+                        <img src="./images/shop/green.jpg" alt="" class="nav-one_img--menu"/>
+                        <p>N10GT</p>
+                    </div>
+                    <div class="nav-one_item--menu">
+                        <img src="./images/shop/orange.jpg" alt="" class="nav-one_img--menu"/>
+                        <p>N 100</p>
+                    </div>
+                </div>
+            </div>
+            <!--End NordSeries menu-->
+            <!--Start Shop Menu-->
+            <div class="nav-one_menu--layer nav-one_menu--shop"
+                onmouseover="showMenu(navOneMenuShop, '0px')" 
+                onmouseout="hideMenu(navOneMenuShop, '-100%')"
+            >
+                <div class="nav-one_menu--flex ">
+                    <div class="nav-one_item--menu">
+                        <img src="./images/shop/green.jpg" alt="" class="nav-one_img--menu"/>
+                        <p>Phone</p>
+                    </div>
+                    <div class="nav-one_item--menu">
+                        <img src="./images/shop/cases.jpg" alt="" class="nav-one_img--menu"/>
+                        <p>Cases and protection</p>
+                    </div>
+                    <div class="nav-one_item--menu">
+                        <img src="./images/shop/powers.jpg" alt="" class="nav-one_img--menu"/>
+                        <p>Power and Cables</p>
+                    </div>
+                    <div class="nav-one_item--menu">
+                        <img src="./images/shop/audio.jpg" alt="" class="nav-one_img--menu"/>
+                        <p>Audio</p>
+                    </div>
+                    <div class="nav-one_item--menu">
+                        <img src="./images/shop/bundle.jpg" alt="" class="nav-one_img--menu"/>
+                        <p>Bundle</p>
+                    </div>
+                    <div class="nav-one_item--menu">
+                        <img src="./images/shop/gear.jpg" alt="" class="nav-one_img--menu"/>
+                        <p>Gear</p>
+                    </div>
+                    <div class="nav-one_item--menu">
+                        <img src="./images/shop/gear.jpg" alt="" class="nav-one_img--menu"/>
+                        <p>Gear</p>
+                    </div>
+                </div>
+            </div>
+            <!--End Shop Menu-->
+            <!--Start Avatar Menu-->
+            <div class="nav-one_menu--avatar" 
+                onmouseover="showMenu(navOneMenuAvatar, '0px')" 
+                onmouseout="hideMenu(navOneMenuAvatar, '-350px')">
+                <ul class="nav-one_ul--avatar">
+                    <li> <a href="#" class="nav-one_a nav-one_a--avatar">Orders</a></li> 
+                    <li> <a href="#" class="nav-one_a nav-one_a--avatar">Account</a></li> 
+                    <li> <a href="#" class="nav-one_a nav-one_a--avatar">Refer a friend</a></li> 
+                    <li> 
+                        <a href="#" class="nav-one_a nav-one_a--avatar">
+                            OnePlus Club
+                            <span class="nav-one_span--avatar"> New</span>
+                        </a>
+                    </li> 
+                </ul>
+                <ul class="nav-one_ul--avatar-sign">
+                    <a class="nav-one_a nav-one_a--avatar-sign">SignIn</a>
+                    <a class="nav-one_a nav-one_a--avatar-sign nav-one_a--avatar-sign-right">SignUp</a>
+                </ul>
+            </div> 
+            <!--End Avatar Menu-->
+            <!--Start Shopping Cart-->
+            <div class="nav-one_menu--bag"
+                onmouseover="showMenu(navOneMenuBag, '0px')" 
+                onmouseout="hideMenu(navOneMenuBag, '-450px')"
+            >
+                <div class="nav-one_menu-header--bag">
+                    <div class="nav-one_menu-title--bag">
+                        <h3>Your Cart</h3>
+                        <h1 class="nav-one_menu-close--bag" onclick="hideMenu(navOneMenuBag, '-450px')">x</h1>
+                    </div>
+                    <p class="nav-one_menu-subtitle--bag">You are 100$ away from free shipping. </p>
+                </div>
+                <div class="nav-one_menu-cart--bag">
+                    <div class="nav-one_menu-filter--bag">
+                        <p class="nav-one_menu-message--bag">Your shopping cart is empty now, bat it doesn't have to be.</p>
+                    </div>
+                </div>
+                <div class="nav-one_menu-buttons--bag">
+                    <button class="nav-one_menu-button--bag">OnePlus Series</button> 
+                    <button class="nav-one_menu-button--bag"> Nord Series</button>
+                    <button class="nav-one_menu-button--bag">Shop</button>
+                </div>
+                <div class="nav-one_menu-button--shop">
+                    <button class="nav-one_menu-button--bag nav-one_menu-button--bag-shop">Go shopping</button>
+                </div>
+            </div>
+            <!--End Shopping Cart-->
+        </nav>
+        
+        <script type="text/javascript" src="./nav-one.js"></script>
+        <!--End navigation one-->
+        <!--start section one-->
+        <div class="section-one flex-two">
+            <div class="flex-two_item"></div>
+            <div class="flex-two_item"></div>
+        </div>
+        <!--End section one-->
+        <!--start section two-->
+        <div class="section-two fixed"></div>
+        <!--End section two-->            
+        <!--Start section three-->
+        <div class="section-three parallax"></div>
+        <!--End section three-->
+        <!--Start section four-->
+        <div class="section-four flex-three">
+            <div class="flex-three_item"></div>
+            <div class="flex-three_item">
+                <div class="flex-two">
+                    <div class="flex-two_item"></div>
+                    <div class="flex-two_item"></div>
+                </div>
+            </div>
+            <div class="flex-three_item"></div>
+        </div>
+        <!--End section four-->
+        <!--Start section five-->
+        <div class="section-five zoom"></div>
+        <!--End section five-->
+        <!--Start section six-->
+        <div class="section-six transparent"></div>
+        <!--End section six-->     
+
+    </div>
+    
+</body>
+</html>
