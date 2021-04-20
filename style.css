@@ -141,6 +141,9 @@ a{
 .nav-one_menu--nord-series{
     height: 50vh;
 }
+.nav-one_menu--flex-center{
+    justify-content: center;
+}
     /*End Nord Menu*/
     /*Start Shop Menu*/
 .nav-one_menu--shop{
