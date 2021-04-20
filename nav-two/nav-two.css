@@ -39,6 +39,7 @@ a{
 .nav-two{
     background-color: #fff;
     width: 100%;
+    z-index: 3;
 }
     /*Sticky Navigation optional on scroll*/
 .nav-two--sticky{
@@ -56,11 +57,15 @@ a{
     position: relative;
     border-bottom: 1px solid #ccc;
 }
+.nav-two_wrapper--first{
+    z-index: 5;
+}
 .nav-two_wrapper--second{
     justify-content:center;
     position: absolute;
     top: 70px;
     right: 100px;
+    z-index: 4;
 }
     /*Sticky Navigation inner on scroll*/
 .nav-two_wrapper--sticky{
