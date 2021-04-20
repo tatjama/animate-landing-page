@@ -144,6 +144,7 @@ a{
     background-color:#fff;
     z-index: 20;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    transition-delay: 0.2s;
 }
 .nav-one_ul--avatar{
     display: flex;
@@ -235,6 +236,10 @@ a{
 .nav-one_menu-button--shop{
     padding: 30px 20px;
     border-top: 1px solid #ccc;
+}
+.nav-one_menu-button--bag-shop:hover{
+    background-color: #000000;
+    color: #fff;
 }
     /*Wnd Shopping Cart - Bag*/
 

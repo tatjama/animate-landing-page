@@ -69,7 +69,9 @@
             <div class="nav-one_menu--nord-series"></div>
             <div class="nav-one_menu--shop"></div>
             <!--Start Avatar Menu-->
-            <div class="nav-one_menu--avatar">
+            <div class="nav-one_menu--avatar" 
+                onmouseover="showMenu(navOneMenuAvatar, '0px')" 
+                onmouseout="hideMenu(navOneMenuAvatar, '-350px')">
                 <ul class="nav-one_ul--avatar">
                     <li> <a href="#" class="nav-one_a nav-one_a--avatar">Orders</a></li> 
                     <li> <a href="#" class="nav-one_a nav-one_a--avatar">Account</a></li> 
@@ -88,7 +90,10 @@
             </div> 
             <!--End Avatar Menu-->
             <!--Start Shopping Cart-->
-            <div class="nav-one_menu--bag">
+            <div class="nav-one_menu--bag"
+                onmouseover="showMenu(navOneMenuBag, '0px')" 
+                onmouseout="hideMenu(navOneMenuBag, '-450px')"
+            >
                 <div class="nav-one_menu-header--bag">
                     <div class="nav-one_menu-title--bag">
                         <h3>Your Cart</h3>
@@ -107,7 +112,7 @@
                     <button class="nav-one_menu-button--bag">Shop</button>
                 </div>
                 <div class="nav-one_menu-button--shop">
-                    <button class="nav-one_menu-button--bag ">Go shopping</button>
+                    <button class="nav-one_menu-button--bag nav-one_menu-button--bag-shop">Go shopping</button>
                 </div>
             </div>
             <!--End Shopping Cart-->
@@ -121,7 +126,7 @@
         const navOneMenuBag = document.querySelector('.nav-one_menu--bag');
         
         const showMenu = (element, value) =>  element.style.right = value;
-        const hideMenu = (element, value) => element.style.right = value;        
+        const hideMenu = (element, value) =>  element.style.right = value;
                
         </script>
         <!--End navigation one-->
