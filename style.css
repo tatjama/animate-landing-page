@@ -133,16 +133,59 @@ a{
     background-color:blue;
     z-index: 20;
 }
+    /*Start Avatar Menu*/
 .nav-one_menu--avatar{
-    width: 300px;
+    width: 350px;
     height: 50vh;
+    padding: 30px 20px 30px 10px;
     position: absolute;
     top: 70px;
-    right: -300px;
-    background-color:green;
+    right: -350px;
+    background-color:#fff;
     z-index: 20;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
 }
+.nav-one_ul--avatar{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+}
+.nav-one_a--avatar{
+    border-bottom: 1px solid #ccc;
+    color: #ccc;
+    padding: 12px;
+    display: block;
+}
+.nav-one_span--avatar{
+    color: #EB0028;
+    border: 1px solid #EB0028;
+    padding: 1px 5px;
+    font-size: 12px;
+    border-radius: 5px;
+    margin-left: 10px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.nav-one_a--avatar:hover{
+    color: #000000;
+}
+.nav-one_ul--avatar-sign{
+    border-bottom: 1px solid #ccc;
+    padding: 17px 10px;
+    text-align: right;
+}
+.nav-one_a--avatar-sign{
+    color:#13b6ec;
+    padding: 0px 10px;
+}
+.nav-one_a--avatar-sign-right{
+    border-left: 1px solid #13b6ec;
 
+}
+    /*End Avatar Menu*/
+    /*Start Shopping Cart -Bag*/
 .nav-one_menu--bag{
     width: 450px;
     height: 50vh;
@@ -193,7 +236,7 @@ a{
     padding: 30px 20px;
     border-top: 1px solid #ccc;
 }
-
+    /*Wnd Shopping Cart - Bag*/
 
 /*End Navigation One*/
 @media screen and (max-width:1050px){
@@ -213,6 +256,9 @@ a{
     .nav-one_img--avatar{
         display:none;
     }
+    .nav-one_menu--avatar{
+        display:none;
+    }
     /*End Navigation One*/
 }
 @media screen and (max-width:768px){
@@ -220,6 +266,11 @@ a{
     .nav-one{
         height: 50px;
     }
+    
+   .nav-one_menu--avatar{
+    display: none;
+    }    
+            /*Start Shopping Cart - Bag*/
     .nav-one_bag--mo{
         display: block;
     }
@@ -230,7 +281,7 @@ a{
         width: 100%;
         height: 100vh;
         top: 0px;
-    }   
+    }       
     .nav-one_menu-title--bag{
         display: flex;
         flex-direction: row;
@@ -250,9 +301,7 @@ a{
     .nav-one_menu-button--shop{
         display: none;
     }
-   .nav-one_menu--avatar{
-       display: none;
-    }    
+        /*End Shopping Cart - Bag*/
     /*End Navigation one*/
 }
 

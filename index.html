@@ -51,7 +51,8 @@
                     <div class="nav-one_images">
                         <a href="#" class= "nav-one_img" 
                         onmouseover="showMenu(navOneMenuAvatar, '0px')" 
-                        onmouseout="hideMenu(navOneMenuAvatar, '-300px')">
+                        onmouseout="hideMenu(navOneMenuAvatar, '-350px')"
+                        >
                             <img class="nav-one_img--avatar" src="images/avatar.jpg"/>
                         </a>
                         <a href="#" class= "nav-one_img nav-one_bag--pc" 
@@ -67,7 +68,26 @@
             <div class="nav-one_menu--one-series"></div>
             <div class="nav-one_menu--nord-series"></div>
             <div class="nav-one_menu--shop"></div>
-            <div class="nav-one_menu--avatar"></div> 
+            <!--Start Avatar Menu-->
+            <div class="nav-one_menu--avatar">
+                <ul class="nav-one_ul--avatar">
+                    <li> <a href="#" class="nav-one_a nav-one_a--avatar">Orders</a></li> 
+                    <li> <a href="#" class="nav-one_a nav-one_a--avatar">Account</a></li> 
+                    <li> <a href="#" class="nav-one_a nav-one_a--avatar">Refer a friend</a></li> 
+                    <li> 
+                        <a href="#" class="nav-one_a nav-one_a--avatar">
+                            OnePlus Club
+                            <span class="nav-one_span--avatar"> New</span>
+                        </a>
+                    </li> 
+                </ul>
+                <ul class="nav-one_ul--avatar-sign">
+                    <a class="nav-one_a nav-one_a--avatar-sign">SignIn</a>
+                    <a class="nav-one_a nav-one_a--avatar-sign nav-one_a--avatar-sign-right">SignUp</a>
+                </ul>
+            </div> 
+            <!--End Avatar Menu-->
+            <!--Start Shopping Cart-->
             <div class="nav-one_menu--bag">
                 <div class="nav-one_menu-header--bag">
                     <div class="nav-one_menu-title--bag">
@@ -90,6 +110,7 @@
                     <button class="nav-one_menu-button--bag ">Go shopping</button>
                 </div>
             </div>
+            <!--End Shopping Cart-->
         </nav>
         
         <script type="text/javascript">
