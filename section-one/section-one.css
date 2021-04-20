@@ -1,0 +1,108 @@
+/*Main*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+body{
+    font-family:"Roman-55","Helvetica Neue","Helvetica","Arial",sans-serif;
+    color: #323232;
+    font-size: 1em;
+    line-height: 1.2;
+    overflow-x: hidden;
+    position: relative;
+    font-feature-settings: "salt";
+    -webkit-font-feature-settings: "salt";
+    -moz-font-feature-settings: "salt";
+}
+li{
+    display: inline-block;
+}
+a{
+    text-decoration:none;
+    cursor: pointer;
+    padding: 5px;
+}
+/*Main*/
+
+/*Start Section one*/
+@keyframes move-up {
+    from{margin-top: 0px;
+         opacity: 0;}
+    to{margin-top: -30px;
+        opacity: 1;}
+}
+.section-one{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+.section-one_item{    
+    width: 50%;
+    height: 100%;
+}
+.section-one_text-box{
+    margin-top:0px;
+    opacity: 0;
+    text-align: center;
+    padding: 40% 0px;
+    animation: move-up 2s ease-in-out forwards;
+    -webkit-animation: move-up 2s ease-in-out forwards;
+}
+.section-one_title{
+    font-size: 45px;
+    font-weight: normal;
+}
+.section-one_subtitle{
+    font-size: 28px;
+    font-weight: normal;
+}
+.section-one_span-subtitle{
+    color: #ccc;
+    text-decoration: line-through;
+}
+.section-one_img{
+    opacity: 0;
+    margin-top: 0px;
+    height: 100%;
+    object-fit: cover;
+    animation: move-up 2s 1s ease-in-out forwards;
+    -webkit-animation: move-up 2s 1s ease-in-out forwards;
+}
+/*Start Responsive Section one*/
+@media screen and (max-width:768px){
+    .section-one{
+        flex-direction: column;
+
+    }
+    .section-one_item{
+        width: 100%;
+    }
+    .section-one_text-box{
+        padding:30px;
+    }
+    .section-one_img{
+        height:80%;
+    }
+}
+/*End Responsive Section onw*/
+
+/*End Section one*/
+/*Start Section two*/
+.section-two{
+    height: 10vh;
+    background-color: #bfcdd4;
+}
+/*End Section two*/
+/*Start Section three*/
+.section-three{
+    height: 100vh;
+    background-color: #bfd4c2;
+}
+/*End Section three*/
+
