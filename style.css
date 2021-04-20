@@ -273,6 +273,7 @@ a{
     /*Wnd Shopping Cart - Bag*/
 
 /*End Navigation One*/
+/*Start Navigation One Responsive*/
 @media screen and (max-width:1050px){
     /*Start Navigation One*/
     .nav-one_wrapper{
@@ -344,8 +345,7 @@ a{
     /*Start Navigation One*/
     .nav-one{
         height: 50px;
-    }
-    
+    }    
    .nav-one_menu--avatar{
     display: none;
     }    
@@ -384,7 +384,7 @@ a{
     /*End Navigation one*/
 }
 
-/*END RESPONSIVE*/
+/*END NAVIGATION ONE RESPONSIVE*/
 
 /*Start Navigation Two*/
 .nav-two{
@@ -465,26 +465,8 @@ a{
     background-color: #B8001F;
 }
 /*End Navigation Two*/
-
+/*Start Navigation Two responsive*/
 @media screen and (max-width:768px){
-    /*Start Navigation One*/
-    .nav-one{
-        height: 50px;
-    }
-    .nav-one_bag--mo{
-        display: block;
-    }
-    .nav-one_bag--pc{
-        display: none;
-    }    
-   .nav-one_menu--bag{
-        width: 100%;
-        height: 100vh;
-    }    
-   .nav-one_menu--avatar{
-       display: none;
-    }    
-    /*End Navigation one*/
     /*Start Navigation Two*/
     .nav-two_wrapper--first{
         z-index:10 ;
@@ -525,6 +507,7 @@ a{
     }
     /*End Navigation Two*/
 }
+/*End Navigation Two Responsive*/
 
 /*Start Section one*/
 .section-one{
