@@ -106,33 +106,47 @@ a{
     width:30px;
     margin-left: 20px;
 }
+.nav-one_menu--layer{
+    width: 100%;
+    position: absolute;
+    top: 70px;
+    right: -100%;
+    background-color:#fff;
+    z-index: 20;
+    padding: 70px 200px;
+}
+.nav-one_menu--flex{
+    display: flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.nav-one_item--menu{
+    width: 15%;
+    margin: 20px;
+    text-align:center;
+}
+.nav-one_img--menu{
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+    /*Start OnePlus Menu*/
 .nav-one_menu--one-series{
-    width: 100%;
     height: 100vh;
-    position: absolute;
-    top: 70px;
-    right: -100%;
-    background-color:rgb(255, 94, 0);
-    z-index: 20;
 }
+    /*End OnePlus Menu*/
+    /*Start Nord menu*/
 .nav-one_menu--nord-series{
-    width: 100%;
     height: 50vh;
-    position: absolute;
-    top: 70px;
-    right: -100%;
-    background-color:pink;
-    z-index: 20;
 }
+    /*End Nord Menu*/
+    /*Start Shop Menu*/
 .nav-one_menu--shop{
-    width: 100%;
     height: 100vh;
-    position: absolute;
-    top: 70px;
-    right: -100%;
-    background-color:blue;
-    z-index: 20;
 }
+    /*End Shop Menu*/
     /*Start Avatar Menu*/
 .nav-one_menu--avatar{
     width: 350px;
