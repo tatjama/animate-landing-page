@@ -42,6 +42,12 @@ const handleOnLoad = () =>{window.onscroll = () => scrollApp();}
 const scrollApp = () => {
     navScroll();
     linkMoveToActive();
+    let value = window.scrollY;
+    if(value > 450 && value < 705 ){
+        const text = document.querySelector('.section-three_title');
+         text.style.left = 120 - (value-330)/4   + '%';
+    }
+    console.log(value);
 }
 
 /* HTML collection
