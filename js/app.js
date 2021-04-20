@@ -38,7 +38,6 @@ const linkMoveToActive = () => {
     }
 }
 
-//ON LoAD
 const handleOnLoad = () =>{window.onscroll = () => scrollApp();}
 const scrollApp = () => {
     navScroll();
