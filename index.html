@@ -12,14 +12,15 @@
         <!--Start navigation one-->
         <nav class="nav-one">
             <div class="nav-one_wrapper">
-                <div class = "nav-one_hamburger"> 
+                <div class = "nav-one_hamburger" onclick="openResponsiveMenu()"> 
                     <img class = "nav-one_img--hamburger" src="./images/hamburger.png"/>
                 </div>
                 <a class="nav-one_logo">
                     <img class="nav-one_img--logo" src="./images/logo.png"/>
                 </a>
                 <div class="nav-one_menu">
-                    <ul>
+                    <p class="nav-one_close--responsive" onclick="closeResponsiveMenu()">X</p>
+                    <ul>                        
                         <li>
                             <a class="nav-one_a" href="#" 
                             onmouseover="showMenu(navOneMenuOneSeries, '0px')" 
@@ -208,9 +209,20 @@
         const navOneMenuShop = document.querySelector('.nav-one_menu--shop');
         const navOneMenuAvatar = document.querySelector('.nav-one_menu--avatar');
         const navOneMenuBag = document.querySelector('.nav-one_menu--bag');
+        const navOneMenu = document.querySelector('.nav-one_menu');
+        const navOneMenuClose = document.querySelector('.nav-one_menu--responsive::before');
         
         const showMenu = (element, value) =>  element.style.right = value;
         const hideMenu = (element, value) =>  element.style.right = value;
+
+        function openResponsiveMenu() {
+            navOneMenu.style.display ="block";
+            navOneMenu.classList.add('nav-one_menu--responsive');
+        }
+        function closeResponsiveMenu() {
+            navOneMenu.style.display = "none";
+            navOneMenu.classList.remove('nav-one_menu--responsive');
+        }
                
         </script>
         <!--End navigation one-->
