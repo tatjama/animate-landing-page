@@ -120,6 +120,7 @@ a{
     background-color:#fff;
     z-index: 20;
     padding: 70px 200px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
 }
 .nav-one_close--menu{
     display: none;

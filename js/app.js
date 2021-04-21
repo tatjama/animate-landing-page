@@ -37,27 +37,33 @@ const linkMoveToActive = () => {
     }             
     }
 }
-
-const handleOnLoad = () =>{window.onscroll = () => scrollApp();}
-const scrollApp = () => {
-    navScroll();
-    linkMoveToActive();
-    let value = window.scrollY;
+const textMove = (value) => {
     if(value > 450 && value < 850 ){
         const text1 = document.querySelector('.section-three_title-one');
         const text2 = document.querySelector('.section-three_title-two');
+        const text2s = document.querySelector('.section-three_title-two sup:first-child');
         const text3 = document.querySelector('.section-three_title-three');
         const text4 = document.querySelector('.section-three_title-four');
          text1.style.left = 120 - (value-460)/4.3  + '%';         
          text2.style.left = 120 - (value*2-990)/6.6   + '%';
          text3.style.left = 120 - (value*4-2550)/8.3   + '%';
          text4.style.left = 120 - (value*5-3590)/7   + '%';
-         text1.style.color = 'rgba('+0+','+ 0+','+ 0+','+(0.3*(value-350)/150)+')';
-         text2.style.color = 'rgba('+0+','+ 0+','+ 0+','+(0.3*(value*2-1000)/150)+')';
-         text3.style.color = 'rgba('+0+','+ 0+','+ 0+','+(0.25*(value*3-1800)/150)+')';
-         text4.style.color = 'rgba('+0+','+ 0+','+ 0+','+(0.3*(value*4-2800)/150)+')';
+         text1.style.color = 'rgba(0, 0, 0, ' + (0.25 * (value - 350) / 150) + ')';
+         text2.style.color = 'rgba(0, 0, 0, ' + (0.25 * (value * 2 - 1200) / 150) +')';
+         text2s.style.border = '3px solid rgba(0, 0, 0, ' + (0.25 * (value * 2 - 1200) / 150) +')';
+         text3.style.color = 'rgba(0, 0, 0, ' + (0.25 * (value * 3 - 2000) / 150) +')';
+         text4.style.color = 'rgba(0, 0, 0, ' + (0.25 * (value * 4 - 2900) / 150) + ')';
     }
-    console.log(value);
+}
+
+const handleOnLoad = () =>{window.onscroll = () => scrollApp();}
+const scrollApp = () => {
+    // Scroll value
+    let value = window.scrollY;
+    navScroll();
+    linkMoveToActive();
+    textMove(value);
+    
 }
 
 /* HTML collection
