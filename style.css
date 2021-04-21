@@ -717,8 +717,51 @@ a{
 /*End Section three*/
 /*Start Section four*/
 .section-four{
-    height: 100vh;
-    background-color: pink;
+    padding: 0px 110px;
+    display:flex;
+    flex-direction: column;
 }
 
+.section-four_item--single{
+    width: 100%;
+    height: 60vh;
+    background-image: url(./images/triptiph/1.webp);
+    background-position-y: 0px ;
+    background-position-x: center;
+    background-size: 70%;
+    margin: 4px;
+    transition: 1s ease-in-out;
+    -webkit-transition: 1s ease-in-out;
+    -moz-transition: 1s ease-in-out;
+    -ms-transition: 1s ease-in-out;
+    -o-transition: 1s ease-in-out;
+}
+.section-four_double{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+}
+.section-four_item--double{
+    width: 50%;
+    height: 40vh;
+    margin-left: 2px;
+    background-position: center;
+    transition: 1s ease-in-out;
+    -webkit-transition: 1s ease-in-out;
+    -moz-transition: 1s ease-in-out;
+    -ms-transition: 1s ease-in-out;
+    -o-transition: 1s ease-in-out;
+}
+.section-four_item--double-one{
+    background-image: url(./images/triptiph/2.webp);
+    margin-right: 4px;
+    background-size: 100%;
+}
+.section-four_item--double-two{
+    background-image: url(./images/triptiph/3.webp);
+    background-size: 75%;
+}
+.section-four_pagination{
+    height: 20vh;
+}
 /*End Section four*/

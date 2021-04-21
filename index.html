@@ -287,22 +287,38 @@
                 <h1 class="section-three_title section-three_title-four">48 MP Triple camera</h1>
             </div>
         </div>
-        <script type="text/javascript">
-
-            
-        </script>
         <!--End section three-->
         <!--Start section four-->
         <div class="section-four flex-three">
-            <div class="flex-three_item"></div>
-            <div class="flex-three_item">
-                <div class="flex-two">
-                    <div class="flex-two_item"></div>
-                    <div class="flex-two_item"></div>
-                </div>
+            <div class="section-four_item--single" onmouseover="zoomPlus(this,'85%','-40px')" 
+            onmouseout="zoomMinus(this, '70%', '0px')">
             </div>
-            <div class="flex-three_item"></div>
+            
+                <div class="section-four_double">
+                    <div class="section-four_item--double section-four_item--double-one"
+                    onmouseover="zoomPlus(this,'120%','center')" 
+                    onmouseout="zoomMinus(this, '100%', 'center')">
+                    </div>
+                    <div class="section-four_item--double section-four_item--double-two"
+                    onmouseover="zoomPlus(this,'95%','center')" 
+                    onmouseout="zoomMinus(this, '75%', 'center')">
+                    </div>
+                </div>
+            
+            
         </div>
+        <div class="section-four_pagination"></div>
+        <script type="text/javascript">
+            function zoomPlus(el, size, position){
+                el.style.backgroundSize = size;
+                el.style.backgroundPositionY =position;
+            }
+            function zoomMinus(el, size, position){
+                el.style.backgroundSize = size;
+                el.style.backgroundPositionY = position;
+            }
+        </script>
+
         <!--End section four-->
         <!--Start section five-->
         <div class="section-five zoom"></div>
