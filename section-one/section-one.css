@@ -45,14 +45,22 @@ a{
 .section-one_item{    
     width: 50%;
     height: 100%;
+    position: relative;
 }
 .section-one_text-box{
-    margin-top:0px;
+    position: absolute;
+    margin: 0px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
     opacity: 0;
-    text-align: center;
-    padding: 40% 0px;
+    z-index: 2;
     animation: move-up 2s ease-in-out forwards;
     -webkit-animation: move-up 2s ease-in-out forwards;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
 }
 .section-one_title{
     font-size: 45px;
@@ -74,24 +82,34 @@ a{
     animation: move-up 2s 1s ease-in-out forwards;
     -webkit-animation: move-up 2s 1s ease-in-out forwards;
 }
+
 /*Start Responsive Section one*/
 @media screen and (max-width:768px){
+    @keyframes move-down {
+        from{margin-top: 0px;
+             opacity: 0;}
+        to{margin-top: 100px;
+            opacity: 1;}
+    }
     .section-one{
         flex-direction: column;
-
+        justify-content:center;
+        align-items:center;
     }
     .section-one_item{
-        width: 100%;
+        width: 90%;
     }
     .section-one_text-box{
-        padding:30px;
-    }
+        width:70%;
+        animation: move-down 2s ease-in-out forwards;
+        -webkit-animation: move-down 2s ease-in-out forwards;
+}
     .section-one_img{
-        height:80%;
-    }
+        animation: move-down 2s 1s ease-in-out forwards;
+        -webkit-animation: move-down 2s 1s ease-in-out forwards;
+}
 }
 /*End Responsive Section onw*/
-
 /*End Section one*/
 /*Start Section two*/
 .section-two{
