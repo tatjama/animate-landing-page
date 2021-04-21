@@ -695,6 +695,9 @@ a{
 }
 }
 @media screen and (max-width:600px){
+    .section-three{
+        background-size: 90%;
+    }
     .section-three_text-box{
         left: 30%;
     }
