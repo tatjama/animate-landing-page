@@ -48,10 +48,10 @@ const scrollApp = () => {
         const text2 = document.querySelector('.section-three_title-two');
         const text3 = document.querySelector('.section-three_title-three');
         const text4 = document.querySelector('.section-three_title-four');
-         text1.style.left = 120 - (value-460)/4.2  + '%';         
-         text2.style.left = 120 - (value*2-980)/6.2   + '%';
-         text3.style.left = 120 - (value*4-2540)/8.2   + '%';
-         text4.style.left = 120 - (value*5-3580)/7   + '%';
+         text1.style.left = 120 - (value-460)/4.3  + '%';         
+         text2.style.left = 120 - (value*2-990)/6.6   + '%';
+         text3.style.left = 120 - (value*4-2550)/8.3   + '%';
+         text4.style.left = 120 - (value*5-3590)/7   + '%';
          text1.style.color = 'rgba('+0+','+ 0+','+ 0+','+(0.3*(value-350)/150)+')';
          text2.style.color = 'rgba('+0+','+ 0+','+ 0+','+(0.3*(value*2-1000)/150)+')';
          text3.style.color = 'rgba('+0+','+ 0+','+ 0+','+(0.25*(value*3-1800)/150)+')';

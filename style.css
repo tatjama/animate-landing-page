@@ -221,7 +221,7 @@ a{
     height: 50vh;
     position: absolute;
     top: 70px;
-    right: -450px;
+    right: -100%;
     background-color: #fff;
     z-index: 20;
     padding: 10px;
@@ -624,12 +624,12 @@ a{
     background-image: url(./images/svg/text.svg);
     background-repeat: no-repeat;
     background-position: center;
-    background-size:40%;
+    background-size:35%;
     position: relative;
 }
 .section-three_text-box{
     width: 90%;
-    margin: 0px 3%;
+    margin: 0px 4%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -641,7 +641,7 @@ a{
 }
 
 .section-three_title{
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: normal;
     padding: 7px;
     position: relative;
@@ -661,6 +661,17 @@ a{
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
+}
+@media screen and (max-width:1100px){
+    .section-three{
+        background-size: 50%;
+    }
+    .section-three_text-box{
+        left:42%;
+    }
+    .section-three_title{
+        font-size:2.8rem;
+    }
 }
 /*End Section three*/
 /*Start Section four*/
