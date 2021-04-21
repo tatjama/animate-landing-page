@@ -602,6 +602,8 @@ a{
     flex-direction:row;
     justify-content:center;
     align-items: center;
+    position: relative;
+    z-index: 1;
 }
 .section-two_img{
     height: 40px;
@@ -671,6 +673,24 @@ a{
     }
     .section-three_title{
         font-size:2.8rem;
+    }
+}
+@media screen and (max-width:768px){
+    .section-three_title{
+        font-size: 1.8rem;
+        padding: 10px;
+    }
+    .section-three_title-two sup{
+        font-size:0.9rem;
+    }
+    .section-three_title-two sup:first-child{
+        border: 2px solid #000000;
+        margin-right: 10px;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
     }
 }
 /*End Section three*/
